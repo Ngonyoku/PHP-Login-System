@@ -23,7 +23,10 @@
 			if ($validate->passed()) {
 				echo "";
 			} else {
-				print_r($validate->errors());
+				$arrayV = $validate->_errors;
+				for ($x=0; $x < count($arrayV) ; $x++) { 
+					echo $arrayV[$x];
+				}
 			}
 		}
 	}

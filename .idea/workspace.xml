@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="" />
+    <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Classes/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Input.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Token.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Validation.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +16,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Zs0cp7VyAZiQIE3UKijlUryBb2" />
   <component name="ProjectViewState">
@@ -48,6 +56,7 @@
       <workItem from="1585661124491" duration="1555000" />
       <workItem from="1585710158192" duration="12614000" />
       <workItem from="1585801609766" duration="9000" />
+      <workItem from="1585934294281" duration="54000" />
     </task>
     <servers />
   </component>
@@ -55,6 +64,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2" timestamp="1585939962168">
+      <screen x="46" y="23" width="1320" height="745" />
+    </state>
+    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1585939962168" />
     <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog" timestamp="1585712425005">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
@@ -77,7 +90,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/Classes/DB.php</url>
-          <line>29</line>
+          <line>119</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

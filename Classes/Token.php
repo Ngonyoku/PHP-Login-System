@@ -1,13 +1,14 @@
 <?php 
 /*
-*-----------------------------------------------------------------------------------------------------------------------------------------------------------
+*-----------------------------------
 * 	Code By @Ngonyoku
-*----------------------------------------------------------------------------------------------------------------------------------------------------------
+*-----------------------------------
+*	This class is associated with creation of Tokens
 */
 
 class Token
 {
-	#generates a Token and assigns it a value
+	//generates a Token and assigns it a value
 	public static function generate()
 	{	
 		return Session::putSession(Config::get('session/token_name'), md5(uniqid()));

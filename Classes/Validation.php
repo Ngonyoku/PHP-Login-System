@@ -1,12 +1,13 @@
 <?php 
 /*
-*-----------------------------------------------------------------------------------------------------------------------------------------------------------
+*-----------------------------------------------------------------------------------------------------------------------
 * 	Code By @Ngonyoku
-*----------------------------------------------------------------------------------------------------------------------------------------------------------
+*-----------------------------------------------------------------------------------------------------------------------
 */
 class Validation
 {
-	private $_passed = false, $_errors = array(), $_db = null;
+	private $_passed = false, $_db = null;
+	public $_errors = array();
 
 	public function __construct()
 	{
@@ -14,7 +15,7 @@ class Validation
 		$this->_db = DB::getInstance();
 	}
 
-	#The Function Validates Input
+	//The Function Validates Input
 	public function check($source, $items = array())
 	{
 		foreach ($items as $item => $rules) {
@@ -23,7 +24,7 @@ class Validation
 				$values = trim($source[$item]);
 
 				if ($rule === 'required' && empty($values)) {
-					$this->addError("{$item} Cannot Be Empty");
+					$this->addError("{$item} Cannot Be Empty <br>");
 				} else if (!empty($values)) {
 					switch ($rule) {
 						case 'min':
@@ -63,6 +64,7 @@ class Validation
 		return $this;
 	}
 
+	//The method stores Errors Encoutred into the array
 	private function addError($error)
 	{
 		$this->_errors[] = $error;
