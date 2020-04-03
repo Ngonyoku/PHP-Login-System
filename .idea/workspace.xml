@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1Zs0cp7VyAZiQIE3UKijlUryBb2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.22755013" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="" />
+      <created>1585612575563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585612575563</updated>
+      <workItem from="1585612577323" duration="2028000" />
+      <workItem from="1585630028394" duration="141000" />
+      <workItem from="1585637862963" duration="2005000" />
+      <workItem from="1585642234224" duration="493000" />
+      <workItem from="1585658467390" duration="2610000" />
+      <workItem from="1585661124491" duration="1555000" />
+      <workItem from="1585710158192" duration="12614000" />
+      <workItem from="1585801609766" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog" timestamp="1585712425005">
+      <screen x="46" y="23" width="1320" height="745" />
+    </state>
+    <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog/46.23.1320.745@46.23.1320.745" timestamp="1585712425005" />
+    <state x="81" y="38" width="1201" height="680" key="SettingsEditor" timestamp="1585661394701">
+      <screen x="46" y="23" width="1320" height="745" />
+    </state>
+    <state x="81" y="38" width="1201" height="680" key="SettingsEditor/46.23.1320.745@46.23.1320.745" timestamp="1585661394701" />
+    <state x="400" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585661142522">
+      <screen x="46" y="23" width="1320" height="745" />
+    </state>
+    <state x="400" y="259" key="com.intellij.ide.util.TipDialog/46.23.1320.745@46.23.1320.745" timestamp="1585661142522" />
+    <state x="452" y="180" width="521" height="407" key="search.everywhere.popup" timestamp="1585715016358">
+      <screen x="46" y="23" width="1320" height="745" />
+    </state>
+    <state x="452" y="180" width="521" height="407" key="search.everywhere.popup/46.23.1320.745@46.23.1320.745" timestamp="1585715016358" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Classes/DB.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
