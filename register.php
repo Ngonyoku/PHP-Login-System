@@ -1,82 +1,55 @@
-<?php 
+<?php
+require_once 'Core/init.php';
+if (Input::exist()) {
+    if (Token::checkToken(Input::get('token'))) {
+        $validate = new Validation();
+        $validate = $validate->validate($_POST, array(
+            'username' => array('required' => true, 'min' => 2, 'max' => 20, 'unique' => 'users'),
+            'password' => array('required' => true, 'min' => 6),
+            'confirmpassword' => array('required' => true, 'matches' => 'password'),
+            'name' => array('required' => true, 'min' => 2, 'max' => 50)
+        ));
+        if ($validate->passed()) {
+            $user = new User();
 
-/*
-*-----------------------------------------------------------------------------------------------------------------------------------------------------------
-* 	Code By @Ngonyoku
-*----------------------------------------------------------------------------------------------------------------------------------------------------------
-*/
-	require_once 'Core/init.php';
+            try {
+                $user->create(array(
+                    'username' => Input::get('username'),
+                    'password' => Input::get('password'),
+                    'salt' => '123456789',
+                    'name' => Input::get('name'),
+                    'joined' => date("Y-m-d H:i:s"),
+                    'group_id' => 1
+                ));
 
-	if (Input::existence()) { #Confirm First that the form has been submitted
-		if (Token::checkToken(Input::get('token'))) { #Creates a new Token If old Token is Existent
-			$validate = new Validation();
+                Session::flash('Home', "Registration was Successful");
+                header('Location:index.php');
+            } catch (Exception $e) {
 
-			//We validate Our Input though check() method
-			$validate = $validate->check($_POST, array(
-				'name' => array('required' => true, 'min' => 3, 'max' => 50),
-				'username' => array('required' => true, 'min' => 2, 'max' => 20, 'unique' => 'user'),
-				'password' => array('required' => true, 'min' => 6),
-				'confirmpassword' => array('required' => true, 'matches' => 'password')
-			));
-
-			 //we Confirm that input is Valid
-			if ($validate->passed()) {
-				$user = new User();
-				$salt = Hash::salt(32);
-				$enter = $user->create(array(
-						'username' => Input::get('username'),
-						'password' => Hash::make(Input::get('password')),
-						'name' => Input::get('name'),
-						'salt' => $salt,
-						'joined' => date("Y-m-d H:i:s"),
-						'groups' => 1
-				));
-
-				if (!$enter) {
-					var_dump($enter);
-				}
-				// $salt = Hash::salt(32);
-				// try {
-
-				// 	$user->create(array(
-				// 		'username' => Input::get('username'),
-				// 		'password' => Hash::make(Input::get('password')),
-				// 		'name' => Input::get('name'),
-				// 		'salt' => $salt,
-				// 		'joined' => date("Y-m-d H:i:s"),
-				// 		'groups' => 1
-				// 	));
-
-				// } catch (Exception $e) {
-				// 	die($e->getMessage());
-				// }
-			} else {
-				$arrayV = $validate->_errors;
-				for ($x=0; $x < count($arrayV) ; $x++) { 
-					echo $arrayV[$x];
-				}
-			}
-		}
-	}
+            }
+        } else {
+            print_r($validate->error());
+        }
+    }
+}
 ?>
-
 <form action="" method="post" autocomplete="off">
-	<div class="field">
-		<label for="name">Name</label>
-		<input type="text" value="<?php echo escape(Input::get('name')); ?>" name="name" id="name">
-	</div>
-	<div class="field">
-		<label for="username">Username</label>
-		<input type="text" name="username" value="<?php echo escape(Input::get('username')); ?>" id="username">
-	</div>
-	<div class="field">
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password">
-	</div>
-	<div class="field">
-		<label for="confirmpassword">Confirem Your Password</label>
-		<input type="password" name="confirmpassword" id="confirmpassword">
-	</div>
-	<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
-	<input type="submit" value="register">
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" value="<?php echo escape(Input::get('name')); ?>" name="name" id="name">
+    </div>
+    <div class="field">
+        <label for="username">Username</label>
+        <input type="text" name="username" value="<?php echo escape(Input::get('username')); ?>" id="username">
+    </div>
+    <div class="field">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <div class="field">
+        <label for="confirmpassword">Confirem Your Password</label>
+        <input type="password" name="confirmpassword" id="confirmpassword">
+    </div>
+    <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
+    <input type="submit" value="register">
 </form>

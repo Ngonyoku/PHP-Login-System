@@ -1,38 +1,31 @@
-<?php 
-/*
-*------------------------------------------------
-* 	Code By @Ngonyoku
-*-----------------------------------------------
-*/
+<?php
+
+
 class Input
 {
-	public static function existence($type = 'post')
-	{
-		switch ($type) {
-			case 'post':
-				return (empty($_POST))? false : true;
-				break;
-			
-			case 'get':
-				return (empty($_POST))? false : true;
-				break;
-			default:
-				return false;
-				break;
-		}
-	}
+    public static function exist($type = 'post')
+    {
+        switch ($type) {
+            case 'post':
+                return (empty($_POST)) ? false : true;
+                break;
+            case 'get':
+                return (empty($_GET)) ? false : true;
+                break;
+            default:
+                return false;
+                break;
+        }
+    }
 
-	public static function get($item)
-	{
-		if (isset($_POST[$item])) {
-			return $_POST[$item];
-		} elseif (isset($_GET[$item])) {
-			return $_GET[$item];
-		} 
-		return '';
-	}
+    public static function get($name)
+    {
+        if (isset($_POST[$name])) {
+            return $_POST[$name];
+        } elseif (isset($_GET[$name])) {
+            return $_GET[$name];
+        }
 
-
+        return '';
+    }
 }
-
-?>

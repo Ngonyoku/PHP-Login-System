@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Hash.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Hash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,20 +61,35 @@
       <workItem from="1585934294281" duration="54000" />
       <workItem from="1585986199979" duration="48000" />
       <workItem from="1585986272998" duration="615000" />
+      <workItem from="1586164005784" duration="4549000" />
     </task>
+    <task id="LOCAL-00001" summary="New Classes Added">
+      <created>1586164061347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586164061347</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New Classes Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Classes Added" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585986244061">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/46.23.1320.745@46.23.1320.745" timestamp="1585986244061" />
-    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2" timestamp="1585939999814">
-      <screen x="46" y="23" width="1320" height="745" />
+    <state x="282" y="0" width="792" height="745" key="CommitChangelistDialog2" timestamp="1586164061128">
+      <screen x="46" y="0" width="1320" height="768" />
     </state>
+    <state x="282" y="0" key="CommitChangelistDialog2/46.0.1320.768@46.0.1320.768" timestamp="1586164061128" />
     <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1585939999814" />
     <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog" timestamp="1585712425005">
       <screen x="46" y="23" width="1320" height="745" />
@@ -79,9 +99,10 @@
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="81" y="38" width="1201" height="680" key="SettingsEditor/46.23.1320.745@46.23.1320.745" timestamp="1585661394701" />
-    <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2" timestamp="1585940006578">
-      <screen x="46" y="23" width="1320" height="745" />
+    <state x="378" y="143" width="600" height="414" key="Vcs.Push.Dialog.v2" timestamp="1586164075649">
+      <screen x="46" y="0" width="1320" height="768" />
     </state>
+    <state x="378" y="143" key="Vcs.Push.Dialog.v2/46.0.1320.768@46.0.1320.768" timestamp="1586164075649" />
     <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2/46.23.1320.745@46.23.1320.745" timestamp="1585940006578" />
     <state x="400" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585986278375">
       <screen x="46" y="23" width="1320" height="745" />
