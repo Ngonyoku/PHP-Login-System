@@ -10,9 +10,11 @@
 // } else {
 // 	echo "Error";
 // }
-
-	$userUpdate = DB::getInstance()->updateData('user',2, array('name' => 'Morio'));
-	if ($userUpdate) {
-		echo "Success";
+// $userUpdate = DB::getInstance()->updateData('user',2, array('name' => 'Morio'));
+// if ($userUpdate) {
+// 	echo "Success";
+// }
+	if (Session::sessionExist('Success')) {
+		echo Session::flash('Success');
 	}
  ?>

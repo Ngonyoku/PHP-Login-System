@@ -13,7 +13,7 @@
 
 			//We validate Our Input though check() method
 			$validate = $validate->check($_POST, array(
-				'name' => array('required' => true, 'min' => 5, 'max' => 50),
+				'name' => array('required' => true, 'min' => 3, 'max' => 50),
 				'username' => array('required' => true, 'min' => 2, 'max' => 20, 'unique' => 'user'),
 				'password' => array('required' => true, 'min' => 6),
 				'confirmpassword' => array('required' => true, 'matches' => 'password')
@@ -21,7 +21,35 @@
 
 			 //we Confirm that input is Valid
 			if ($validate->passed()) {
-				echo "";
+				$user = new User();
+				$salt = Hash::salt(32);
+				$enter = $user->create(array(
+						'username' => Input::get('username'),
+						'password' => Hash::make(Input::get('password')),
+						'name' => Input::get('name'),
+						'salt' => $salt,
+						'joined' => date("Y-m-d H:i:s"),
+						'groups' => 1
+				));
+
+				if (!$enter) {
+					var_dump($enter);
+				}
+				// $salt = Hash::salt(32);
+				// try {
+
+				// 	$user->create(array(
+				// 		'username' => Input::get('username'),
+				// 		'password' => Hash::make(Input::get('password')),
+				// 		'name' => Input::get('name'),
+				// 		'salt' => $salt,
+				// 		'joined' => date("Y-m-d H:i:s"),
+				// 		'groups' => 1
+				// 	));
+
+				// } catch (Exception $e) {
+				// 	die($e->getMessage());
+				// }
 			} else {
 				$arrayV = $validate->_errors;
 				for ($x=0; $x < count($arrayV) ; $x++) { 

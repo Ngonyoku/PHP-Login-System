@@ -12,7 +12,7 @@ class Session
 		return (isset($_SESSION[$name])) ? true : false;
 	}
 
-	//Sets the session
+	//Creates the session
 	public static function putSession($name, $value)
 	{
 		return $_SESSION[$name] = $value;
@@ -29,6 +29,18 @@ class Session
 	{
 		if (self::sessionExist($name)) {
 			unset($_SESSION[$name]);
+		}
+	}
+
+	public static function flash($name, $string = "")
+	{
+		if (self::sessionExist($name)) {
+			$session = self::getSession($name);
+			self::deleteSession($name);
+
+			return $session;
+		} else {
+			self::putSession($name, $string);
 		}
 	}
 }

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Classes/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Input.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Token.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +54,8 @@
       <workItem from="1585710158192" duration="12614000" />
       <workItem from="1585801609766" duration="9000" />
       <workItem from="1585934294281" duration="54000" />
+      <workItem from="1585986199979" duration="48000" />
+      <workItem from="1585986272998" duration="615000" />
     </task>
     <servers />
   </component>
@@ -64,10 +63,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2" timestamp="1585939962168">
+    <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585986244061">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
-    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1585939962168" />
+    <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/46.23.1320.745@46.23.1320.745" timestamp="1585986244061" />
+    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2" timestamp="1585939999814">
+      <screen x="46" y="23" width="1320" height="745" />
+    </state>
+    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1585939999814" />
     <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog" timestamp="1585712425005">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
@@ -76,10 +79,14 @@
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="81" y="38" width="1201" height="680" key="SettingsEditor/46.23.1320.745@46.23.1320.745" timestamp="1585661394701" />
-    <state x="400" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585661142522">
+    <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2" timestamp="1585940006578">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
-    <state x="400" y="259" key="com.intellij.ide.util.TipDialog/46.23.1320.745@46.23.1320.745" timestamp="1585661142522" />
+    <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2/46.23.1320.745@46.23.1320.745" timestamp="1585940006578" />
+    <state x="400" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1585986278375">
+      <screen x="46" y="23" width="1320" height="745" />
+    </state>
+    <state x="400" y="259" key="com.intellij.ide.util.TipDialog/46.23.1320.745@46.23.1320.745" timestamp="1585986278375" />
     <state x="452" y="180" width="521" height="407" key="search.everywhere.popup" timestamp="1585715016358">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
