@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="Database File">
+    <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Hash.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Hash.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <workItem from="1585986272998" duration="615000" />
       <workItem from="1586164005784" duration="4549000" />
       <workItem from="1586205190451" duration="5838000" />
-      <workItem from="1586257700058" duration="12434000" />
+      <workItem from="1586257700058" duration="14586000" />
     </task>
     <task id="LOCAL-00001" summary="New Classes Added">
       <created>1586164061347</created>
@@ -85,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586205834771</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="I've improved the method of Validation">
+      <created>1586274767532</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586274767532</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,17 +100,18 @@
     <MESSAGE value="New Classes Added" />
     <MESSAGE value="New User Can Now be Registered Onto Database." />
     <MESSAGE value="Database File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database File" />
+    <MESSAGE value="I've improved the method of Validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="I've improved the method of Validation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585986244061">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/46.23.1320.745@46.23.1320.745" timestamp="1585986244061" />
-    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2" timestamp="1586205834461">
+    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2" timestamp="1586274766466">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
-    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2/46.0.1320.768@46.0.1320.768" timestamp="1586205834461" />
+    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2/46.0.1320.768@46.0.1320.768" timestamp="1586274766466" />
     <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1585939999814" />
     <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog" timestamp="1585712425005">
       <screen x="46" y="23" width="1320" height="745" />
@@ -139,7 +145,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/Classes/Validation.php</url>
-          <line>49</line>
+          <line>54</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

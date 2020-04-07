@@ -1,12 +1,16 @@
 <?php
 
-/*
- *
- * _____________________________________________________________________________________________________________________
- *      Regular Expressions
- *  1.  "/^[a-zA-Z\s\.\d]+$/" - Only lowercase, uppercase, whitespaces, numbers and period(.)
- *  2.  "/^[a-zA-Z\d\._]+@[a-zA-Z\d\._]+\.[a-zA-Z\d\.]{2,}+$/" - Email Address
- *  3.  "/^(\+254|0)\d{9}$/" - Kenyan Phone Number
+/*  *  Written By @Ngonyoku
+    *___________________________________________________________________________________________________________________\
+    * This Class is Used to Perform Basic form validation Operations.
+    * __________________________________________________________________________________________________________________
+    *      Regular Expressions
+    *  1.  "/^[a-zA-Z\s\.\d]+$/" - Only lowercase, uppercase, whitespaces, numbers and period(.)
+    *  2.  "/^[a-zA-Z\d\._]+@[a-zA-Z\d\._]+\.[a-zA-Z\d\.]{2,}+$/" - Email Address
+    *  3.  "/^(\+254|0)\d{9}$/" - Kenyan Phone Number
+    *  4.  "/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i" - Website
+    *  5.  "/^[a-zA-Z ]*$/" - letters and whitespace
+    *___________________________________________________________________________________________________________________
  * */
 
 class Validation
@@ -14,6 +18,7 @@ class Validation
     private $_passed = false, $_db = null;
     public $_error = array();
 
+    //The Constructor creates an Instance of the database.
     public function __construct()
     {
         $this->_db = DB::getInstance();
@@ -62,6 +67,7 @@ class Validation
 //        return $this;
 //    }
 
+    //The method is Used to Sanitize and Validate Email Addresses.
     public function validEmail($email)
     {
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -75,22 +81,26 @@ class Validation
         return $this;
     }
 
+    //This method is used to validate any Kind of input Entered On to the Form By use of RegEx
     public function validate($data, $pattern = "/^[a-zA-Z\s\.\d]+$/", $min = null, $max = null)
     {
         $data = trim($data);
         if (empty($data)) {
-            $this->addError("emptyPassword", " Password is Required and should not Contain White Spaces");
-        } elseif (strlen($data) < $min || strlen($data) > $max) {
-            $this->addError("passwordLength", "Password must be at least {$min} Characters and at most {$max} Characters");
+            $this->addError("dataError", " Password is Required and should not Contain White Spaces");
+        } elseif ($min != null || $max != null) {
+            if (strlen($data) < $min || strlen($data) > $max) {
+                $this->addError("dataError", "Password must be at least {$min} Characters and at most {$max} Characters");
+            }
         } elseif (!preg_match($pattern, $data)) {
-            $this->addError("passwordError", " Only letters and Numbers are required! ");
+            $this->addError("dataError", " Only letters and Numbers are required! ");
         } elseif (empty($this->_error)) {
             return $this->_passed = true;
         }
         return $this;
     }
 
-    public function addError($errorName, $error)
+    //The method stores an array that were pronounced during validation of data
+    private function addError($errorName, $error)
     {
         return $this->_error[$errorName] = $error;
     }
