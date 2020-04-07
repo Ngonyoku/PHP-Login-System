@@ -16,4 +16,9 @@ class Hash
     {
         return self::make(uniqid());
     }
+
+    public static function hashPassword($password)
+    {
+        return password_hash($password,PASSWORD_DEFAULT);
+    }
 }
