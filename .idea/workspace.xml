@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/DB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Hash.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Hash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +22,20 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -25,7 +46,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -60,7 +83,9 @@
       <workItem from="1585986272998" duration="615000" />
       <workItem from="1586164005784" duration="4549000" />
       <workItem from="1586205190451" duration="5838000" />
-      <workItem from="1586257700058" duration="14586000" />
+      <workItem from="1586257700058" duration="14788000" />
+      <workItem from="1586282951667" duration="29000" />
+      <workItem from="1586345485516" duration="15164000" />
     </task>
     <task id="LOCAL-00001" summary="New Classes Added">
       <created>1586164061347</created>
@@ -90,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586274767532</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="I've improved the method of Validation.">
+      <created>1586277593090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586277593090</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,30 +133,36 @@
     <MESSAGE value="New User Can Now be Registered Onto Database." />
     <MESSAGE value="Database File" />
     <MESSAGE value="I've improved the method of Validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="I've improved the method of Validation" />
+    <MESSAGE value="I've improved the method of Validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="I've improved the method of Validation." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="301" y="49" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586355703770">
+      <screen x="46" y="0" width="1320" height="768" />
+    </state>
+    <state x="301" y="49" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog/46.0.1320.768@46.0.1320.768" timestamp="1586355703770" />
     <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585986244061">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/46.23.1320.745@46.23.1320.745" timestamp="1585986244061" />
-    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2" timestamp="1586274766466">
+    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2" timestamp="1586277592880">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
-    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2/46.0.1320.768@46.0.1320.768" timestamp="1586274766466" />
+    <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2/46.0.1320.768@46.0.1320.768" timestamp="1586277592880" />
     <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1585939999814" />
-    <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog" timestamp="1585712425005">
-      <screen x="46" y="23" width="1320" height="745" />
+    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog" timestamp="1586345776111">
+      <screen x="46" y="0" width="1320" height="768" />
     </state>
+    <state x="525" y="310" key="NewPhpFileDialog/46.0.1320.768@46.0.1320.768" timestamp="1586345776111" />
     <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog/46.23.1320.745@46.23.1320.745" timestamp="1585712425005" />
     <state x="81" y="38" width="1201" height="680" key="SettingsEditor" timestamp="1585661394701">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="81" y="38" width="1201" height="680" key="SettingsEditor/46.23.1320.745@46.23.1320.745" timestamp="1585661394701" />
-    <state x="378" y="143" width="600" height="414" key="Vcs.Push.Dialog.v2" timestamp="1586274704740">
+    <state x="378" y="143" width="600" height="414" key="Vcs.Push.Dialog.v2" timestamp="1586277597990">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
-    <state x="378" y="143" width="600" height="414" key="Vcs.Push.Dialog.v2/46.0.1320.768@46.0.1320.768" timestamp="1586274704740" />
+    <state x="378" y="143" width="600" height="414" key="Vcs.Push.Dialog.v2/46.0.1320.768@46.0.1320.768" timestamp="1586277597990" />
     <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2/46.23.1320.745@46.23.1320.745" timestamp="1585940006578" />
     <state x="400" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1586257702047">
       <screen x="46" y="0" width="1320" height="768" />
@@ -139,16 +177,5 @@
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="452" y="180" width="521" height="407" key="search.everywhere.popup/46.23.1320.745@46.23.1320.745" timestamp="1585715016358" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Classes/Validation.php</url>
-          <line>54</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
