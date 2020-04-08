@@ -22,7 +22,23 @@ require_once 'Core/init.php';
 //    echo "Failed";
 //}
 
-if (Session::sessionExist('Home')) {
-    echo '<p>' . Session::flash('Home') . '</p>';
-}
+//if (Session::sessionExist('Home')) {
+//    echo '<p>' . Session::flash('Home') . '</p>';
+//}
+//$getOne = DB::getInstance()->getOne('username', 'user', array('username', '=', 'Rick'));
+//if ($getOne) {
+//    echo 'Success';
+//} else {
+//    echo 'Failed';
+//}
+
+$table = "user";
+$db = DB::getInstance()->getPDO()->prepare("SELECT password FROM user WHERE username = 'Rhino' ");
+$db->execute();
+$result = $db->fetch(PDO::FETCH_ASSOC);
+echo "<br>";
+echo $result["password"];
+
+
+
 
