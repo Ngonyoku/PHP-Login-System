@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Classes/Redirect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/Errors/404.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classes/Cookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +92,7 @@
       <workItem from="1586345485516" duration="30217000" />
       <workItem from="1586428607948" duration="2154000" />
       <workItem from="1586433848175" duration="412000" />
+      <workItem from="1586556937455" duration="2860000" />
     </task>
     <task id="LOCAL-00001" summary="New Classes Added">
       <created>1586164061347</created>
@@ -173,14 +172,14 @@
     </state>
     <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2/46.0.1320.768@46.0.1320.768" timestamp="1586388688953" />
     <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1585939999814" />
-    <state x="509" y="198" width="384" height="373" key="NewPhpClassDialog" timestamp="1586428771891">
+    <state x="509" y="198" width="384" height="373" key="NewPhpClassDialog" timestamp="1586557165613">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
-    <state x="509" y="198" width="384" height="373" key="NewPhpClassDialog/46.0.1320.768@46.0.1320.768" timestamp="1586428771891" />
-    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog" timestamp="1586430135768">
+    <state x="509" y="198" width="384" height="373" key="NewPhpClassDialog/46.0.1320.768@46.0.1320.768" timestamp="1586557165613" />
+    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog" timestamp="1586557173655">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
-    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog/46.0.1320.768@46.0.1320.768" timestamp="1586430135768" />
+    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog/46.0.1320.768@46.0.1320.768" timestamp="1586557173655" />
     <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog/46.23.1320.745@46.23.1320.745" timestamp="1585712425005" />
     <state x="81" y="38" width="1201" height="680" key="SettingsEditor" timestamp="1585661394701">
       <screen x="46" y="23" width="1320" height="745" />

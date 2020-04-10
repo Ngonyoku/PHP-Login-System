@@ -25,6 +25,18 @@ require_once 'Core/init.php';
 if (Session::sessionExist('Home')) {
     echo '<p>' . Session::flash('Home') . '</p>';
 }
+
+$user = new User();
+if ($user->isLoggedIn()) {
+    ?>
+    <h1>Hello <?php echo escape($user->data()->username); ?></h1>
+    <ul>
+        <li><a href="logout.php">LogOut</a></li>
+    </ul>
+    <?php
+} else {
+    ?><p>Please <a href="login.php">LogIn </a> or <a href="register.php"> Register</a></p><?php
+}
 //$getOne = DB::getInstance()->getOne('username', 'user', array('username', '=', 'Rick'));
 //if ($getOne) {
 //    echo 'Success';
@@ -39,8 +51,4 @@ if (Session::sessionExist('Home')) {
 //echo "<br>";
 //echo $result["password"];
 
-echo Session::getSession(Config::get('session/session_name'));
-
-
-
-
+// echo Session::getSession(Config::get('session/session_name'));
