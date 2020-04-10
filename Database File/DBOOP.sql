@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2020 at 10:41 PM
+-- Generation Time: Apr 11, 2020 at 01:18 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -53,9 +53,9 @@ CREATE TABLE `user` (
   `username` varchar(20) NOT NULL,
   `password` varchar(64) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `salt` varchar(32) DEFAULT NULL,
-  `joined` datetime DEFAULT NULL,
-  `group_id` int(11) DEFAULT NULL
+  `salt` varchar(32) NOT NULL,
+  `joined` datetime NOT NULL,
+  `group_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -63,13 +63,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `name`, `salt`, `joined`, `group_id`) VALUES
-(5, 'Morio', 'password', 'Timmy Turner', '123456789', '2020-04-06 20:14:08', 1),
-(6, 'Morio', 'password', 'Rick Man', '123456789', '2020-04-06 20:17:32', 1),
-(7, 'Morio', 'password', 'Rick Man', '123456789', '2020-04-06 22:21:41', 1),
-(8, 'Ngonyoku', 'password', 'Rick Man', '123456789', '2020-04-06 22:22:14', 1),
-(9, 'JayDe', 'password', 'Jacob Drilla', '123456789', '2020-04-06 22:28:30', 1),
-(10, 'Mad Max', 'password', 'Maxwell Wanjeru', '123456789', '2020-04-06 22:31:59', 1),
-(11, 'Akoko', 'password', 'River Dale', '123456789', '2020-04-06 22:34:17', 1);
+(30, 'Rick', '$2y$10$7rl6/Zdomo7OXE8qdhFseeseYLYEeFBC8WAcDligV5xMU0yryBXFm', 'RickMan', '123456789', '2020-04-08 18:32:03', 1),
+(31, 'Rhino', '$2y$10$E/50Mi2rmcdjz0M7liUv4.5uJzxalqkdtZf/M2AxJYRIkXMJkvF1q', 'Ryan Hooper', '123456789', '2020-04-08 18:53:46', 1),
+(32, 'Morio', 'password', 'Morio Fulani', '123456789', '2020-04-09 19:04:25', 1),
+(33, 'Morio', 'password', 'Morio Fulani', '123456789', '2020-04-09 19:05:53', 1);
 
 -- --------------------------------------------------------
 
@@ -80,7 +77,7 @@ INSERT INTO `user` (`id`, `username`, `password`, `name`, `salt`, `joined`, `gro
 CREATE TABLE `users_session` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `hash` varchar(50) NOT NULL
+  `hash` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -119,13 +116,13 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `users_session`
 --
 ALTER TABLE `users_session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
