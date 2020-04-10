@@ -18,7 +18,7 @@ if (Input::exist()) {
         if ($validate->passed()) {
             $user = new User();
             try {
-                $user->create(array(
+                $user->register(array(
                     'username' => Input::get('username'),
                     'password' => Hash::hashPassword(Input::get('password')),
                     'salt' => '123456789',

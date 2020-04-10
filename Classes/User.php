@@ -35,17 +35,19 @@ class User
             $dbh->bindValue(1, $username);
             $dbh->execute();
             $result = $dbh->fetch(PDO::FETCH_ASSOC);
+
+            #Check if the password Entered is the same as the password in Database
             if (password_verify($password, $result["password"])) {
                 Session::putSession($this->_sessionName, $this->data()->id);
-
                 return true;
             }
         }
         return false;
     }
 
-    public function create($fields = array())
+    public function register($fields = array())
     {
+        #Insert new User into Database
         if (!$this->_db->insert('user', $fields)) {
             throw new Exception("Unable To Create Account!");
         }

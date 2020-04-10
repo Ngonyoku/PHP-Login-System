@@ -12,7 +12,10 @@ if (Input::exist()) {
 
         if ($validate->passed()) {
             $user = new User();
-            $user->login($username,$password);
+            $user->login($username, $password);
+            if ($user) {
+                Redirect::moveTo("index.php");
+            }
         } else {
             print_r($validate->error());
         }
