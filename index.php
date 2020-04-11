@@ -32,6 +32,7 @@ if ($user->isLoggedIn()) {
     <h1>Hello <?php echo escape($user->data()->username); ?></h1>
     <ul>
         <li><a href="logout.php">LogOut</a></li>
+        <li><a href="update.php">Update Profile</a></li>
     </ul>
     <?php
 } else {

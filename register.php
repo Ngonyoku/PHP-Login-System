@@ -28,9 +28,9 @@ if (Input::exist()) {
                 ));
 
                 Session::flash('Home', "Registration was Successful");
-                header('Location:index.php');
+                Redirect::moveTo('index.php');
             } catch (Exception $e) {
-
+                $e->getMessage();
             }
         } else {
             print_r($validate->error());

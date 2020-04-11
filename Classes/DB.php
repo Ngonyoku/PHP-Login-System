@@ -24,6 +24,7 @@ class DB
     private static $_instance = null;
     private $_pdo, $_query, $_error = 0, $_results, $_count = 0;
 
+    //The constructor creates the PDO instance.
     private function __construct()
     {
         try {
@@ -36,6 +37,7 @@ class DB
         }
     }
 
+    //This method returns an instance of this DB class.
     public static function getInstance()
     {
         #We check if an Instance of this class has been set, if not we set the instance
@@ -46,11 +48,13 @@ class DB
         return self::$_instance;
     }
 
+    //This method returns an instance of the PDO class.
     public function getPDO()
     {
         return $this->_pdo;
     }
 
+    //This method is used to query the database.
     public function query($sql, $params = array())
     {
         $this->_error = false;
@@ -73,6 +77,7 @@ class DB
         return $this;
     }
 
+    //This method completes the actions required by the CRUDE operations (i.e get(),delete())
     public function action($sql, $table, $where = array())
     {
         if (count($where) === 3) { #We confirm that the array is has 3 values
@@ -96,6 +101,7 @@ class DB
         return false;
     }
 
+    //This method inserts data Into database
     public function insert($table, $fields = array())
     {
         $keys = array_keys($fields);
@@ -119,6 +125,7 @@ class DB
         return false;
     }
 
+    //This method updates data from the database
     public function update($table, $id, $fields = array())
     {
         $set = "";
@@ -141,16 +148,19 @@ class DB
         return false;
     }
 
+    //This method selects all data from database.
     public function get($table, $fields)
     {
         return $this->action("SELECT * ", $table, $fields);
     }
 
+    //The method selects the specified data from Database
     public function selectOne($item, $table, $fields)
     {
         return $this->action("SELECT {$item}", $table, $fields);
     }
 
+    //The method deletes data from Database
     public function delete($table, $fields)
     {
         return $this->action("DELETE ", $table, $fields);

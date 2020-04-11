@@ -20,6 +20,8 @@ class User
                     //Process The LogOut
                 }
             }
+        } else {
+            $this->find($user);
         }
     }
 
@@ -36,40 +38,7 @@ class User
                 return true;
             }
         }
-    }
 
-    public function login($username = null, $password = null, $remember = false)
-    {
-        #Confirm that the Username Exists in Database
-        $user = $this->find($username);
-        if ($user) {
-            $dbh = $this->_db->getPDO()->prepare("SELECT password FROM user WHERE username = ?");
-            $dbh->bindValue(1, $username);
-            $dbh->execute();
-            $result = $dbh->fetch(PDO::FETCH_ASSOC);
-
-            #Check if the password Entered is the same as the password in Database
-            if (password_verify($password, $result["password"])) {
-                Session::putSession($this->_sessionName, $this->data()->id);
-
-                if ($remember) {
-                    $hash = Hash::unique();
-                    $hashCheck = $this->_db->get('users_session', array('user_id', '=', $this->data()->id));
-
-                    if (!$hashCheck->count()) {
-                        $this->_db->insert('users_session', array(
-                            'user_id' => $this->data()->id,
-                            'hash' => $hash
-                        ));
-                    } else {
-                        $hash = $hashCheck->first()->hash;
-                    }
-
-                    Cookie::putCookie($this->_cookieName, $hash, Config::get('remember/cookie_expire'));
-                }
-                return true;
-            }
-        }
         return false;
     }
 
@@ -81,18 +50,84 @@ class User
         }
     }
 
+    public function update($fields = array(), $id = null)
+    {
+        if (!$id && $this->isLoggedIn()) {
+            $id = $this->data()->id;
+        }
+        if (!$this->_db->update('user', $id, $fields)) {
+            throw new Exception("Failed To Update Profile");
+        }
+    }
+
+    public function login($username = null, $password = null, $remember = false)
+    {
+        #if the parameters have not been initialised(meaning user is already logged in), we start our session.
+        if (!$username && !$password && $this->exists()) {
+            Session::putSession($this->_sessionName, $this->data()->id);
+        } else {
+            #..else we Log the user In.
+            $user = $this->find($username);#Confirm that the Username Exists in Database
+
+            if ($user) {
+                $dbh = $this->_db->getPDO()->prepare("SELECT password FROM user WHERE username = ?");
+                $dbh->bindValue(1, $username);
+                $dbh->execute();
+                $result = $dbh->fetch(PDO::FETCH_ASSOC);#Fetch the result from the database.
+
+                #Check if the password Entered is the same as the password in Database
+                if (password_verify($password, $result["password"])) {
+                    #We start our session
+                    Session::putSession($this->_sessionName, $this->data()->id);
+
+                    #If "remember me" is set in the form..we do the following...
+                    if ($remember) {
+                        #Generate a hash key and Confirm if the user has been recorded in the "users_session" table
+                        $hash = Hash::unique();
+                        $hashCheck = $this->_db->get('users_session', array('user_id', '=', $this->data()->id));
+
+                        #if session has not been recorded in Database(i.e in the "users_session" table), we record the session.
+                        if (!$hashCheck->count()) {
+                            $this->_db->insert('users_session', array(
+                                'user_id' => $this->data()->id,
+                                'hash' => $hash
+                            ));
+                        } else {
+                            #...else if the session is recorded, the value of the hash is set to the existent hash in the database.
+                            $hash = $hashCheck->first()->hash;
+                        }
+                        #We generate a cookie to mark the user.
+                        Cookie::putCookie($this->_cookieName, $hash, Config::get('remember/cookie_expire'));
+                    }
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     public function logout()
     {
+        #Permanetly delete the Cookie and session from both the computer and Database.
         $this->_db->delete('users_session', array('user_id', '=', $this->data()->id));
         Cookie::deleteCookie($this->_cookieName);
         Session::deleteSession($this->_sessionName);
     }
 
+    //This method checks if there is any data which has been returned from database.
+    public function exists()
+    {
+        return (!empty($this->data())) ? true : false;
+    }
+
+    //The method returns the status of the user if he/she is logged in or Not.
     public function isLoggedIn()
     {
         return $this->_isLoggedIn;
     }
 
+    //The Methods returns the data stored in the database.
     public function data()
     {
         return $this->_data;
