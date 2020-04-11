@@ -33,6 +33,7 @@ if ($user->isLoggedIn()) {
     <ul>
         <li><a href="logout.php">LogOut</a></li>
         <li><a href="update.php">Update Profile</a></li>
+        <li><a href="changePassword.php">Update Password</a></li>
     </ul>
     <?php
 } else {

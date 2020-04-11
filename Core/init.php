@@ -18,6 +18,7 @@ spl_autoload_register(function ($class) {
 });
 
 require_once 'Functions/Sanitize.php';
+require_once 'Functions/displayErrors.php';
 //$session = Config::get('session/session_name');
 //$cookie = Config::get('remember/cookie_name');
 if (!Session::sessionExist(Config::get('session/session_name')) && Cookie::cookieExists(Config::get('remember/cookie_name'))) {

@@ -26,6 +26,7 @@ class Validation
         $this->_db = DB::getInstance();
     }
 
+    //The method ensures that the inputs meet the Criteria specified.
     public function check($source, $items = array())
     {
         foreach ($items as $item => $rules) {
@@ -37,22 +38,22 @@ class Validation
                     $this->addError("emptyError", " {$item} Cannot Be Empty! ");
                 } elseif (!empty($value)) {
                     switch ($rule) {
-                        case 'min':
+                        case 'min': #Checks if input is below the Minimum value specified.
                             if (strlen($value) < $rule_value) {
                                 $this->addError("minError", "{$item} must be a minimum of {$rule_value} characters");
                             }
                             break;
-                        case 'max':
+                        case 'max': #Checks if input is below the Maximum value specified.
                             if (strlen($value) > $rule_value) {
                                 $this->addError("maxError", "{$item} shouldn't exceed {$rule_value} characters");
                             }
                             break;
-                        case 'matches':
+                        case 'matches': #Checks if input value matches the specified value.
                             if ($value != $source[$rule_value]) {
                                 $this->addError("matchError", "{$item} Must Match {$rule_value}");
                             }
                             break;
-                        case 'unique':
+                        case 'unique': #Checks if input value is Unique in database.
                             $check = $this->_db->get($rule_value, array($item, '=', $value));
                             if ($check->count()) {
                                 $this->addError('exists', "Username is taken");
@@ -62,6 +63,7 @@ class Validation
             }
         }
 
+        #If the $_error variable is empty(meaning no errors were registered), then Validation has been passed.
         if (empty($this->_error)) {
             $this->_passed = true;
         }
