@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1b63eb-a262-45d4-8314-1a9dbf8d0266" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Functions/displayErrors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/changePassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/init.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,8 @@
       <workItem from="1586561957873" duration="166000" />
       <workItem from="1586568661820" duration="8091000" />
       <workItem from="1586613765954" duration="1739000" />
-      <workItem from="1586622776293" duration="5119000" />
+      <workItem from="1586622776293" duration="7315000" />
+      <workItem from="1586647911959" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="New Classes Added">
       <created>1586164061347</created>
@@ -163,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586614831477</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Profile Can now be successfully Updated(Password).">
+      <created>1586629157539</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1586629157539</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +183,8 @@
     <MESSAGE value="I've improved the method of Validation.&#10;User Login is Currently In Progress." />
     <MESSAGE value="User can now Log In and the browser can remember the User." />
     <MESSAGE value="Profile Can now be successfully Updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile Can now be successfully Updated." />
+    <MESSAGE value="Profile Can now be successfully Updated(Password)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile Can now be successfully Updated(Password)." />
   </component>
   <component name="WindowStateProjectService">
     <state x="301" y="49" width="800" height="671" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586364717026">
@@ -189,41 +195,42 @@
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="392" y="121" width="618" height="550" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/46.23.1320.745@46.23.1320.745" timestamp="1585986244061" />
-    <state x="282" y="23" width="792" height="768" key="CommitChangelistDialog2" timestamp="1586614830586">
+    <state x="282" y="23" width="792" height="768" key="CommitChangelistDialog2" timestamp="1586629156741">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="282" y="0" width="792" height="768" key="CommitChangelistDialog2/46.0.1320.768@46.0.1320.768" timestamp="1586560469349" />
-    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1586614830586" />
+    <state x="282" y="23" width="792" height="745" key="CommitChangelistDialog2/46.23.1320.745@46.23.1320.745" timestamp="1586629156741" />
     <state x="509" y="198" width="384" height="373" key="NewPhpClassDialog" timestamp="1586557165613">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
     <state x="509" y="198" width="384" height="373" key="NewPhpClassDialog/46.0.1320.768@46.0.1320.768" timestamp="1586557165613" />
-    <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog" timestamp="1586624110582">
-      <screen x="46" y="23" width="1320" height="745" />
+    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog" timestamp="1586648624717">
+      <screen x="46" y="0" width="1320" height="768" />
     </state>
-    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog/46.0.1320.768@46.0.1320.768" timestamp="1586568705511" />
+    <state x="525" y="310" width="352" height="145" key="NewPhpFileDialog/46.0.1320.768@46.0.1320.768" timestamp="1586648624717" />
     <state x="525" y="324" width="352" height="145" key="NewPhpFileDialog/46.23.1320.745@46.23.1320.745" timestamp="1586624110582" />
     <state x="81" y="38" width="1201" height="680" key="SettingsEditor" timestamp="1585661394701">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="81" y="38" width="1201" height="680" key="SettingsEditor/46.23.1320.745@46.23.1320.745" timestamp="1585661394701" />
-    <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2" timestamp="1586614840312">
+    <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2" timestamp="1586629167395">
       <screen x="46" y="23" width="1320" height="745" />
     </state>
     <state x="378" y="143" width="600" height="414" key="Vcs.Push.Dialog.v2/46.0.1320.768@46.0.1320.768" timestamp="1586560475220" />
-    <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2/46.23.1320.745@46.23.1320.745" timestamp="1586614840312" />
+    <state x="378" y="162" width="600" height="414" key="Vcs.Push.Dialog.v2/46.23.1320.745@46.23.1320.745" timestamp="1586629167395" />
     <state x="400" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1586428604102">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
     <state x="400" y="243" key="com.intellij.ide.util.TipDialog/46.0.1320.768@46.0.1320.768" timestamp="1586428604101" />
     <state x="400" y="259" key="com.intellij.ide.util.TipDialog/46.23.1320.745@46.23.1320.745" timestamp="1585986278375" />
-    <state x="453" y="168" key="run.anything.popup" timestamp="1586576115893">
+    <state x="453" y="168" key="run.anything.popup" timestamp="1586648188617">
       <screen x="46" y="0" width="1320" height="768" />
     </state>
-    <state x="453" y="168" key="run.anything.popup/46.0.1320.768@46.0.1320.768" timestamp="1586576115893" />
-    <state x="452" y="180" width="521" height="407" key="search.everywhere.popup" timestamp="1585715016358">
-      <screen x="46" y="23" width="1320" height="745" />
+    <state x="453" y="168" key="run.anything.popup/46.0.1320.768@46.0.1320.768" timestamp="1586648188617" />
+    <state x="452" y="162" width="521" height="420" key="search.everywhere.popup" timestamp="1586648202829">
+      <screen x="46" y="0" width="1320" height="768" />
     </state>
+    <state x="452" y="162" width="521" height="420" key="search.everywhere.popup/46.0.1320.768@46.0.1320.768" timestamp="1586648202829" />
     <state x="452" y="180" width="521" height="407" key="search.everywhere.popup/46.23.1320.745@46.23.1320.745" timestamp="1585715016358" />
   </component>
   <component name="XDebuggerManager">
@@ -243,6 +250,11 @@
           <url>file://$PROJECT_DIR$/Classes/DB.php</url>
           <line>141</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Classes/User.php</url>
+          <line>119</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

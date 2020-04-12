@@ -29,13 +29,20 @@ if (Session::sessionExist('Home')) {
 $user = new User();
 if ($user->isLoggedIn()) {
     ?>
-    <h1>Hello <?php echo escape($user->data()->username); ?></h1>
+    <h1>Hello <a
+                href="profile.php?user=<?php echo escape($user->data()->username); ?>"><?php echo escape($user->data()->username); ?></a>
+    </h1>
     <ul>
         <li><a href="logout.php">LogOut</a></li>
         <li><a href="update.php">Update Profile</a></li>
         <li><a href="changePassword.php">Update Password</a></li>
     </ul>
     <?php
+    if ($user->hasPermissions('admin') && $user->hasPermissions('moderator')) {
+        echo '<p>You are both an Admin and a moderator.</p>';
+    } elseif (!$user->hasPermissions('admin') && $user->hasPermissions('moderator')) {
+        echo '<p>You are a moderator!.</p>';
+    }
 } else {
     ?><p>Please <a href="login.php">LogIn </a> or <a href="register.php"> Register</a></p><?php
 }

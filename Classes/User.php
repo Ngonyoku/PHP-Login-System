@@ -115,6 +115,19 @@ class User
         Session::deleteSession($this->_sessionName);
     }
 
+    public function hasPermissions($key)
+    {
+        $group = $this->_db->get('groups', array('id', '=', $this->data()->group_id));
+        if ($group->count()) {
+            $permissions = json_decode($group->first()->permission, true);
+            if ($permissions[$key] == true) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     //This method checks if there is any data which has been returned from database.
     public function exists()
     {
